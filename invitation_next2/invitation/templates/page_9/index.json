@@ -1,0 +1,7 @@
+{
+    "tplName": "page_9",
+    "boy_Mobile" : "tel:18222915689",
+    "girl_Mobile" : "tel:18222915689",
+    "address_pic1" : "http://api.map.baidu.com/staticimage?center=116.433737,39.90978&width=320&height=300&zoom=17",
+    "address_text1" : "http://api.map.baidu.com/marker?location=39.90978,116.433737&title=北京火车站&content=北京火车站&output=html&src=kmeimei|kmeimei"
+}

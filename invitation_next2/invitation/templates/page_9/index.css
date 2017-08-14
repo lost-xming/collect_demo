@@ -1,0 +1,224 @@
+.page_9 {
+  background: url("http://file.xitie.net.cn/165bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page_9 .area {
+  width: 80%;
+  height: 78%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 20;
+}
+
+.page_9 .area .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20
+}
+
+.page_9 .area .pic1 {
+  width: 93%;
+  height: 40%;
+  z-index: 19;
+  position: absolute;
+  top: 1%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto
+}
+
+.page_9 .area .dizhi {
+  width: 4rem;
+  z-index: 21;
+  position: absolute;
+  top: -65%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto
+}
+
+.page_9 .area .gui {
+  display: block;
+  width: 93%;
+  height: 1rem;
+  z-index:22;
+  position: absolute;
+  top: 31%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 26px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 1rem;
+}
+
+[data-dpr="3"] .page_9 .area .gui {
+  font-size: 40px
+}
+
+[data-dpr="1"] .page_9 .area .gui {
+  font-size: 14px
+}
+
+.page_9 .area .gui i {
+  padding-right: .156rem
+}
+
+.page_9 .area .phone {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 12%;
+  z-index: 22;
+  left: 5%;
+}
+
+.page_9 .area .phone a {
+  font-size: 30px;
+  padding: .2rem .35rem;
+  background: RGB(51, 153, 102);
+  color: #fff;
+  border-radius: .12rem;
+}
+
+[data-dpr="3"] .page_9 .area .phone a {
+  font-size: 46px
+}
+
+[data-dpr="1"] .page_9 .area .phone a {
+  font-size: 16px
+}
+
+.page_9 .area .phone a i {
+  padding-right: .125rem;
+  font-size: 36px;
+  vertical-align: text-bottom;
+}
+
+[data-dpr="3"] .page_9 .area .phone a i {
+  font-size: 54px
+}
+
+[data-dpr="1"] .page_9 .area .phone a i {
+  font-size: 18px
+}
+
+.page_9 .l1 {
+  position: absolute;
+  top: 3%;
+  z-index: 15;
+  left: 6%;
+  width: 34%
+}
+
+.page_9 .l2 {
+  position: absolute;
+  top: 2%;
+  z-index: 15;
+  left: 54%;
+  width: 44%
+}
+
+.page_9 .l3 {
+  position: absolute;
+  top: 53%;
+  z-index: 15;
+  left: -1%;
+  width: 32%
+}
+
+.page_9 .l4 {
+  width: 27%;
+  position: absolute;
+  top: 2%;
+  z-index: 18;
+  left: 67%
+}
+
+.page_9 .l5 {
+  width: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  top: -73%;
+  z-index: 26
+}
+
+.page_9 .l6 {
+  width: 30%;
+  position: absolute;
+  top: 37%;
+  right: 0%;
+  z-index: 18
+}
+
+.page_9 .l7 {
+  width: 41%;
+  position: absolute;
+  top: 55%;
+  right: 0%;
+  z-index: 18
+}
+
+.page_9 .l8 {
+  width: 47%;
+  position: absolute;
+  bottom: 5%;
+  right: 0%;
+  z-index: 18
+}
+
+.page_9 .l9 {
+  width: 34%;
+  position: absolute;
+  bottom: 6%;
+  left: 0%;
+  z-index: 18
+}
+
+.page_9 .l10 {
+  width: 39%;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  z-index: 18
+}
+
+.page_9 .l11 {
+  width: 19%;
+  position: absolute;
+  top: 28%;
+  left: -7%;
+  z-index: 16
+}
+
+.page_9 .l12 {
+  width: 25%;
+  position: absolute;
+  bottom: 5%;
+  left: 17%;
+  z-index: 18
+}

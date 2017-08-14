@@ -1,0 +1,182 @@
+.page_8 {
+  background: url("http://file.xitie.net.cn/165bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page_8 .area {
+  width: 80%;
+  height: 78%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 20;
+}
+
+.page_8 .area .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20
+}
+
+.page_8 .area .pic1 {
+  width: 92%;
+  height: 38%;
+  z-index: 19;
+  position: absolute;
+  top: -45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto
+}
+
+.page_8 .area .pic2 {
+  width: 92%;
+  height: 40%;
+  z-index: 19;
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto
+}
+
+.page_8 .area .xin1 {
+  position: absolute;
+  top: 0;
+  left: -59%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 20;
+  width: 1rem
+}
+
+.page_8 .area .xin2 {
+  position: absolute;
+  top: 0;
+  left: 59%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 20;
+  width: 1rem
+}
+
+.page_8 .area .hua {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 20;
+  width: 1.7rem
+}
+
+.page_8 .l1 {
+  position: absolute;
+  top: 3%;
+  z-index: 15;
+  left: 6%;
+  width: 34%
+}
+
+.page_8 .l2 {
+  position: absolute;
+  top: 2%;
+  z-index: 15;
+  left: 54%;
+  width: 44%
+}
+
+.page_8 .l3 {
+  position: absolute;
+  top: 53%;
+  z-index: 15;
+  left: -1%;
+  width: 32%
+}
+
+.page_8 .l4 {
+  width: 27%;
+  position: absolute;
+  top: 2%;
+  z-index: 18;
+  left: 67%
+}
+
+.page_8 .l5 {
+  width: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  top: -73%;
+  z-index: 26
+}
+
+.page_8 .l6 {
+  width: 30%;
+  position: absolute;
+  top: 37%;
+  right: 0%;
+  z-index: 18
+}
+
+.page_8 .l7 {
+  width: 41%;
+  position: absolute;
+  top: 55%;
+  right: 0%;
+  z-index: 18
+}
+
+.page_8 .l8 {
+  width: 47%;
+  position: absolute;
+  bottom: 5%;
+  right: 0%;
+  z-index: 18
+}
+
+.page_8 .l9 {
+  width: 34%;
+  position: absolute;
+  bottom: 6%;
+  left: 0%;
+  z-index: 18
+}
+
+.page_8 .l10 {
+  width: 39%;
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  z-index: 18
+}
+
+.page_8 .l11 {
+  width: 19%;
+  position: absolute;
+  top: 28%;
+  left: -7%;
+  z-index: 16
+}
+
+.page_8 .l12 {
+  width: 25%;
+  position: absolute;
+  bottom: 5%;
+  left: 17%;
+  z-index: 18
+}

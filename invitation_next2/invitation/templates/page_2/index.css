@@ -1,0 +1,151 @@
+.page_2 .bg3 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11
+}
+
+.page_2 .pic {
+    width: 110%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.page_2 .pic1 {
+  z-index: 8
+}
+
+.page_2 .pic2 {
+  z-index: 9
+}
+
+.page_2 .pic3 {
+  z-index: 10
+}
+
+.page_2 .shang1 {
+  position: absolute;
+  top: 0;
+  left: 3rem;
+  z-index: 13;
+  width: 4rem
+}
+
+.page_2 .shang2 {
+  position: absolute;
+  top: .4rem;
+  right: 1.7rem;
+  z-index: 13;
+  width: 1.7rem
+}
+
+.page_2 .shang3 {
+  position: absolute;
+  top: .45rem;
+  left: .62rem;
+  z-index: 12;
+  width: 5rem
+}
+
+.page_2 .shang4 {
+  position: absolute;
+  top: 0;
+  right: .5rem;
+  z-index: 12;
+  width: 4rem
+}
+
+.page_2 .zuoxia1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 13;
+  width: 2.5rem
+}
+
+.page_2 .zuoxia2 {
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  z-index: 13;
+  width: 2rem
+}
+
+.page_2 .zuoxia3 {
+  position: absolute;
+  bottom: 2rem;
+  left: -.1rem;
+  z-index: 12;
+  width: 1.7rem
+}
+
+.page_2 .youxia1 {
+  position: absolute;
+  bottom: .1rem;
+  right: 2.2rem;
+  z-index: 12;
+  width: 2.3rem
+}
+
+.page_2 .youxia2 {
+  position: absolute;
+  bottom: 0;
+  right: .9rem;
+  z-index: 13;
+  width: 2.5rem
+}
+
+.page_2 .youxia3 {
+  position: absolute;
+  bottom: .2rem;
+  right: -.1rem;
+  z-index: 12;
+  width: 2.5rem
+}
+
+.page_2 .bg4 {
+  width: 8rem;
+  height: 86%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10
+}
+
+.page_2 .luzhu {
+  width: 10rem;
+  height: 8rem;
+  position: absolute;
+  right: 0;
+  bottom: 1rem;
+  margin: auto;
+  z-index: 14;
+  opacity: .7
+}
+  @-webkit-keyframes expandOpen1 {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(1.8) translateZ(0);
+    }
+    50% {
+      opacity: 1;
+      -webkit-transform: scale(0.95) translateZ(0);
+    }
+    80% {
+      opacity: 1;
+      -webkit-transform: scale(1.05) translateZ(0);
+    }
+    100% {
+      -webkit-transform: scale(1) translateZ(0);
+      opacity: 1;
+    }
+  }
