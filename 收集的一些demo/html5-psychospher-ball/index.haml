@@ -1,0 +1,6 @@
+.scene
+  .sphere
+    - (1..12).each do |i|
+      .ring{ :id => "ring#{i}" }
+        - (1..12).each do |i|
+          .spoke{ :id => "spoke#{i}" }

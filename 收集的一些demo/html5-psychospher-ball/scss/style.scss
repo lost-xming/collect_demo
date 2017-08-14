@@ -1,0 +1,138 @@
+@import "compass/css3";
+
+$SIZE: 300px;
+
+// Colors
+$BG_COL: #222;
+$BALL_COLOR: hsla(200, 90%, 60%, .85);
+$SPOKE_COL:  hsla(60, 90%, 80%, 1);
+$SHADOW_COLOR: hsla(0, 0%, 0%, .25);
+
+// Shadows
+$SHADOW_HEIGHT: 50px;
+$SHADOW_OFFSET_Y: 400px;
+$INNER_SHADOW: -20px -20px 0 hsla(0,0%,0%,.25);
+
+$ANIM_DUR: 24s;
+$ANIM_DUR2: 60s;
+
+*, *:before, *:after { box-sizing: border-box; }
+html { background: $BG_COL; }
+
+.scene {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+  width: $SIZE; height: $SIZE;
+  border-radius: 50%;
+  background: $BALL_COLOR;
+  perspective: 9999px;
+  transform-style: preserve-3d;
+}
+
+.scene:before,
+.scene:after {
+  position: absolute;
+  width: 100%;
+  border-radius: 50%;
+  content: '';
+}
+
+.scene:before {
+  top: $SHADOW_OFFSET_Y;
+  height: $SHADOW_HEIGHT;
+  background: $SHADOW_COLOR;
+}
+
+.scene:after {
+  top: 0;
+  height: 100%;
+  border: 3px solid black;
+  border-radius: 50%;
+  box-shadow: $INNER_SHADOW inset;
+  transform: translateZ(151px);
+}
+
+.sphere { 
+  width: 100%;
+  height: 100%;
+  animation: rotate $ANIM_DUR infinite linear;
+  transform-style: preserve-3d;
+}
+
+.ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.spoke {
+  position: absolute;
+  top: 0; bottom: 0; 
+  margin: auto;
+  width: 100%;
+  height: 0;
+  transform-style:preserve-3d;
+}
+
+@for $i from 1 through 12 {
+  .sphere #ring#{$i}{
+    animation: rotateRing#{$i} $ANIM_DUR infinite ease-in-out alternate;
+  }
+}
+
+@for $i from 1 through 12 {
+  .sphere #spoke#{$i} {
+    animation: rotateSpoke#{$i} $ANIM_DUR2 infinite ease-in-out alternate;
+  }
+}
+
+.spoke:before,
+.spoke:after {
+  position: absolute; 
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: $SPOKE_COL;
+  content: ''; 
+  transform: rotateY(90deg);
+}
+
+.spoke:before {
+  top: -6px;
+  right: -6px;
+  transform: rotateY(90deg);
+}
+.spoke:after {
+  top: -6px;
+  left: -6px;
+  transform: rotateY(-90deg);
+}
+
+@for $i from 1 through 12 {
+  @keyframes rotateRing#{$i}{
+    0% { transform: rotateX((360deg / 11 ) * ($i)); }
+    20% { transform: rotateX((360deg / 12) * ($i)); }
+    40% { transform: rotateY((360deg / 11) * ($i)); }
+    60% { transform: rotateY((360deg / 12) * ($i)); }
+    80% { transform: rotateZ((360deg / 11) * ($i)); }
+    100% { transform: rotateZ((360deg / 12) * ($i)); }
+  }
+}
+
+@for $i from 1 through 12 {
+  @keyframes rotateSpoke#{$i}{
+    0% { transform: rotateX(360deg / 24 * $i); }
+    10% { transform: rotateY(360deg / 24 * $i); }
+    20% { transform: rotateZ(360deg / 24 * $i); }
+    30% { transform: rotateX(360deg / 24 * $i) rotateY(360deg / 24 * $i); }
+    40% { transform: rotateX(360deg / 24 * $i) rotateY(360deg / 24 * $i) rotateZ(360deg / 24 * $i); }
+    50% { transform: rotateY(180deg / 18 * $i); }
+    60% { transform: rotateZ(180deg / 18 * $i); }
+    70% { transform: rotateY(180deg / 12 * $i); }
+    80% { transform: rotateZ(180deg / 12 * $i); }
+    90% { transform: rotateZ(180deg / 12 * $i); }
+    100% { transform: rotateX(180deg / 6 * $i); }
+  }
+}
+@keyframes rotate{ 100%{ transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg) ; } }
