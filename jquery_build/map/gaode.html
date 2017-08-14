@@ -1,0 +1,86 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<style>
+body{ margin:0;padding:0;font:12px/16px Verdana,Helvetica,Arial,sans-serif;}
+</style>
+
+<script language="javascript" src="http://webapi.amap.com/maps?v=1.2&key=a76729d8990e2aac7c24d3bd99db069b"></script>
+<script language="vbscript">
+Function str2asc(strstr)
+str2asc = hex(asc(strstr))
+End Function
+Function asc2str(ascasc)
+asc2str = chr(ascasc)
+End Function
+</script>
+<script language="javascript">
+var obj;
+function mapInit(){
+	var coordinate = location.href.match(/[0-9]+.[0-9]+,[0-9]+.[0-9]+/);
+	if(coordinate)
+	{
+		var hotel = location.href.match(/&hotel=(.*)+&/);
+		//var name=decodeURI(hotel[1]);
+		if(!hotel){
+			hotel[1] = "酒店位置";
+		}
+		var size = location.href.match(/size=[0-9]+,[0-9]+/);
+		if(size != null){
+			size = size.toString().match(/[0-9]+,[0-9]+/);
+			size = size.toString().split(',');
+			document.getElementById('map').style.width=size[0]+'px';
+			document.getElementById('map').style.height=size[1]+'px';
+			
+		}
+		var tool_display=true;
+		var tool=location.href.match(/tool=[0-9]/);
+		if(tool!=null){
+			tool = tool.toString().match(/[0-9]/);
+			
+			if(tool==2){
+				var tool_display=false;	
+			}
+		}
+		coordinate = coordinate.toString();
+		var arr = coordinate.split(","); //分割坐标
+		mapObj = new AMap.Map("map",{
+		center:new AMap.LngLat(arr[1],arr[0]),
+		level:13
+		});
+		mapObj.plugin(["AMap.ToolBar"],function(){
+			tool = new AMap.ToolBar({
+				direction:tool_display,//隐藏方向导航
+				ruler:tool_display//隐藏视野级别控制尺
+			});
+			mapObj.addControl(tool);
+		});
+		//构建点对象
+		var marker = new AMap.Marker({
+		map:mapObj,
+		position:new AMap.LngLat(arr[1],arr[0]), //基点位置
+		icon:"http://webapi.amap.com/images/marker_sprite.png", //marker图标，直接传递地址url
+		offset:{x:-8,y:-34} //相对于基点的位置
+		});
+		var info = [];
+		info.push("<b>&nbsp;&nbsp;"+decodeURIComponent(hotel[1])+"</b>");
+		var inforWindow = new AMap.InfoWindow({
+		offset:new AMap.Pixel(0,-30),
+		content:info.join("<br />")
+		}); 
+		AMap.event.addListener(marker,'mousemove',function(e){
+		inforWindow.open(mapObj,marker.getPosition());
+		})
+		mapObj.setCenter(marker.getPosition());
+	}
+}
+
+
+</script>
+</head>
+
+<body onLoad="mapInit()">
+<div id="map" style="width:659px;height:400px;border:#F6F6F6 solid 1px;"></div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<script type="text/javascript" src="http://ditu.google.cn/maps/api/js?sensor=true&hl=zh-CN"></script>
+		<script type="text/javascript">
+		//地图api
+		function initialize() {
+			var coordinate = location.href.match(/[0-9]+.[0-9]+,[0-9]+.[0-9]+/);
+			if(coordinate){
+				var hotel = location.href.match(/hotel=(.*)/);
+				if(!hotel){
+					hotel[1] = "酒店位置";
+				}
+				var size = location.href.match(/size=[0-9]+,[0-9]+/);
+				if(size != null){
+					size = size.toString().match(/[0-9]+,[0-9]+/);
+					size = size.toString().split(',');
+					document.getElementById('map_canvas').style.width=size[0]+'px';
+					document.getElementById('map_canvas').style.height=size[1]+'px';
+					
+				}
+				coordinate = coordinate.toString();
+				var arr = coordinate.split(","); //分割坐标
+				var latlng = new google.maps.LatLng(arr[0],arr[1]);//视图位置
+				var myOptions = {
+				  zoom: 15,//缩放
+				  center: latlng,
+				  mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+
+				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+				var myLatlng = new google.maps.LatLng(arr[0],arr[1]);//标记位置
+
+
+				var marker = new google.maps.Marker({
+					  position: myLatlng, 
+					  map: map, 
+					  title:hotel[1]//标记名称
+				});
+			}
+		}
+		</script>
+    </head>
+    <body style="margin:0" onload="initialize()">
+		<div id="map_canvas" style=""></div>
+    </body>
+</html>
