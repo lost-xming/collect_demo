@@ -132,3 +132,23 @@ krpano的强大我就不多说了，了解过的人应该都知道，现在市�
 
 链接地址：[[vue+vuex+vue-router] 强撸一发暗黑风](https://segmentfault.com/a/1190000005787179 "[vue+vuex+vue-router] 强撸一发暗黑风")
 
+
+## 12、浅析cookie
+	1、cookie是有大小限制的。每个cookie所存放的数据不能超过4k，如果cookie字符串长度超过4k，则该属性将返回空字符串。
+
+	2、由于cookie最终都是以文件形式存放在客户端计算机中，所以查看和修改cookie都是很方便的，
+		这就是为什么常说cookie不能存放重要信息的原因。
+	3、每个cookie是存在有效期的。在默认情况下，一个cookie的生命周期就是在关闭浏览器的时候结束。
+		如果想要cookie能在浏览器关掉之后还可以使用，就必须腰围cookie设置有效期，也就是cookie的失效日期。
+	4、alert(typeof document.cookie) 结果是string,而不是array。
+	5、cookie有域和路径这个概念。域就是domain的概念，因为浏览器是个注意安全的环境，
+		所以不同的域之间是不能互相访问cookie的(当然可以通过特殊设置达到cookie跨域访问)。路径就是routing的概念，
+		一个网页所创建的cookie只能被这个网页在同一目录或者子目录下的所有页面访问，而不能被其他目录下的网页访问。
+	6、创建cookie的方式和定义变量的方式有些相似，都需要使用cookie名称和cookie值。同个网站可以创建多个cookie，
+		而多个cookie可以存放在同一个cookie文件中。
+
+通常cookie信息都是使用http连接传递数据，这种传递方式很容易被查看，所以cookie存储的信息容易被窃取。加入cookie中所传递的内容比较重要，那么就要求使用加密的数据传输；
+
+在输入cookie信息时，不能包含空格，分号，逗号等特殊符号，而在一般情况下，cookie信息的存储都是采用未编码的方式。所以在设置cookie信息之前，要先使用escape（）函数将cookie信息进行编码，在获取得到cookie值的时候，再使用unescape()函数把值进行转换回来。
+
+详细请查看：[浅析cookie](http://caibaojian.com/about-cookie.html "浅析cookie")
