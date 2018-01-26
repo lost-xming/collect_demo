@@ -1,0 +1,426 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:before,.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+
+.fl{
+	float: left;
+}
+
+.fr{
+	float: right;
+}
+
+ul li {
+    list-style: none;
+}
+
+body{
+    color: #000 !important;
+    background-color: #EFEFF4 !important;
+}
+
+html body.active{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.header_box {
+	position: relative;
+	padding: 0;
+	height: 0.48rem;
+	text-align: center;
+	line-height: 0.48rem;
+	font-size: 0.14rem;
+	background: #ffffff;
+}
+.header_box .back {
+	position: absolute;
+	right: 0.1rem;
+	top: 0.15rem;
+	width: 0.17rem;
+	height:0.18rem;
+    background: url("img/home.png") center center no-repeat;
+    background-size: 100%;
+}
+.header_box .city {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 0.48rem;
+	text-align: left;
+	line-height: 0.48rem;
+	font-size: 0.15rem;
+}
+.header_box .city * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding-left: 0.15rem;
+	height: 100%;
+}
+.header_box .city span {
+	width: 0.5rem;
+}
+.header_box select {
+	z-index: 9;
+	opacity: 0;
+}
+
+.banner_1{
+    height: 1.54rem;
+    width: 3.2rem;
+}
+
+.banner_1 img{
+    height: 1.54rem;
+    width: 3.2rem;
+}
+
+.banner_2 img{
+    width: 3.2rem;
+    height: 0.7rem;
+}
+
+.hotHotel{
+    height: 0.84rem;
+    width: 3.2rem;
+    text-align: center;
+    line-height: 0.84rem;
+    font-size: 0.14rem;
+    background-color: #fff;
+}
+
+.hotHotel .red_col{
+    font-size: 0.2rem;
+    vertical-align: bottom;
+    color: #E83123;
+    margin-left: 0.03rem;
+    margin-right: 0.03rem;
+}
+
+.input_item{
+    width: 3.2rem;
+    height: 0.44rem;
+    position: relative;
+    padding-bottom: 0.15rem;
+    background-color: #fff;
+}
+
+.input_item .input_item_div{
+    width: 2.9rem;
+    height: 0.44rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input_item input{
+    width: 2.9rem;
+    height: 0.44rem;
+    font-size: 0.14rem;
+    box-sizing: border-box;
+    border: 1px solid #EFEFF4;
+    border-radius: 0.04px;
+    padding-left: 0.3rem;
+    outline: none;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s linear;
+}
+
+.input_item .input_item_div:after{
+    content: "";
+    display: block;
+    width: 0.3rem;
+    height: 0.44rem;
+    background: url("./img/icon_phone.png") center center no-repeat;
+    background-size: 0.1rem;
+    position: absolute;
+    left : 0;
+    top: 0 ;
+}
+
+.input_item input:focus{
+    caret-color : #E83123;
+    border: 1px solid #000;
+}
+
+.submit_item {
+    height: 0.44rem;
+    width: 3.2rem;
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 0.23rem;
+    margin-bottom: 0.06rem;
+}
+
+.submit_item .btn_submit{
+    width: 2.9rem;
+    height: 0.44rem;
+    background-color:#E83123;
+    text-align: center;
+    line-height: 0.44rem;
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 0.14rem;
+    border: none;
+    outline: none;
+    border-radius: 0.04rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.submit_item .btn_submit:active{
+    user-select: none;
+    color: #FFC4C4;
+    background-color:#D72416;
+}
+
+.hotel_list {
+    width: 3.2rem;
+    height: auto;
+}
+
+.hotel_list .top_title {
+    height: 0.44rem;
+    width: 3.2rem;
+    position: relative;
+    background-color: #fff;
+}
+
+.hotel_list .top_title .title_text{
+    height: 0.44rem;
+    line-height: 0.44rem;
+    text-align: center;
+    font-size: 0.14rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.hotel_list .top_title .title_text:before{
+    content: "—";
+    display: inline-block;
+    margin-right: 0.05rem;
+    font-size: 0.14rem;
+    color: #D7D7D7;
+}
+.hotel_list .top_title .title_text:after{
+    content: "—";
+    display: inline-block;
+    margin-left: 0.05rem;
+    font-size: 0.14rem;
+    color: #D7D7D7;
+}
+
+.hotel_lis li{
+    float: left;
+    width: 1.57rem;
+    height: 2.46rem;
+    background-color: #fff;
+    margin-bottom: 0.06rem;
+}
+
+.hotel_lis li img{
+    width: 1.57rem;
+    height: 1.57rem;
+    float: left;
+    margin-bottom: 0.11rem;
+}
+
+.hotel_lis li .hotel_name{
+    height: 0.4rem;
+    width: 1.27rem;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    margin-bottom: 0.07rem;
+    float: left;
+    overflow: hidden;
+}
+.hotel_lis li .price_add{
+    width: 100%;
+    float: left;
+}
+.hotel_lis li .hotel_price{
+    width: 0.6rem;
+    height: 0.2rem;
+    color: #E83123;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    padding-left: 0.15rem;
+    float: left;
+}
+.hotel_lis li .hotel_add{
+    width: 0.6rem;
+    height: 0.2rem;
+    color: #999999;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    text-align: right;
+    padding-right: 0.15rem;
+    float: right;
+}
+
+
+
+.hotel_lis li:nth-child(1){
+    width: 3.2rem;
+    height: 2.62rem;
+}
+
+.hotel_lis li:nth-child(1) img{
+    width: 3.2rem;
+    height: 2rem;
+    float: left;
+    margin-bottom: 0.11rem;
+}
+
+.hotel_lis li:nth-child(1) .hotel_name{
+    height: 0.2rem;
+    width: 2.9rem;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+    float: left;
+}
+
+.hotel_lis li:nth-child(1) .price_add{
+    width: 3.2rem;
+    float: left;
+}
+.hotel_lis li:nth-child(1) .hotel_price{
+    width: 1.3rem;
+    height: 0.2rem;
+    color: #E83123;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    padding-left: 0.15rem;
+    float: left;
+}
+
+.hotel_lis li:nth-child(1) .hotel_add{
+    width: 1.3rem;
+    height: 0.2rem;
+    color: #999999;
+    font-size: 0.12rem;
+    line-height: 0.2rem;
+    text-align: right;
+    padding-right: 0.15rem;
+    float: right;
+}
+
+.hotel_lis li:nth-child(2),
+.hotel_lis li:nth-child(4){
+    margin-right: 0.06rem;
+}
+
+.banner_3 img{
+    width: 3.2rem;
+    height: 1.54rem;
+}
+
+.footer_box{
+    width: 3.2rem;
+    height: 0.63rem;
+    background:url("./img/logo.png") center center no-repeat;
+    background-size: 0.86rem;
+}
+
+
+
+/* 弹层CSS */
+.pop_box{
+    width: 100%;
+    height: calc(100vh);
+    height: -webkit-calc(100vh);
+    font-size: 0.14rem;
+    background-color:#EFEFF4;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+
+.pop_box .title{
+    position: relative;
+	padding: 0;
+	height: 0.48rem;
+    text-align: center;
+    border-bottom: 0.02rem solid #EFEFF4;
+	line-height: 0.48rem;
+	font-size: 0.14rem;
+    background: #FFFFFF;
+}
+.pop_box .title .cancel {
+    color: #000000;
+	position: absolute;
+	right: 0.15rem;
+	top: 0;
+}
+
+.pop_box .content{
+    width: 3.2rem;
+    height: 2.4rem;
+    background-color: #fff;
+    position: relative;
+}
+.pop_box .content .text_info{
+    height: 1.21rem;
+    width: 100%;
+    text-align: center;
+    line-height: 0.24rem;
+}
+
+.pop_box .content .text_info > div{
+    height: 0.48rem;
+    width: 100%;
+    position: absolute;
+    top: 0.4rem;
+}
+
+.pop_box .content .text_info .red_col{
+    font-size: 0.2rem;
+    vertical-align: bottom;
+    color: #E83123;
+    margin: 0 0.03rem;
+}
+
+.rewards{
+   padding-top: 0.14rem;    
+   padding-left: 0.15rem;
+   padding-right: 0.15rem;
+}
+
+.rewards .rewards_title{
+    line-height: 0.26rem;
+}
+
+.rewards ul li{
+    width: 1.4rem;
+    float: left;
+    line-height: 0.2rem;
+    overflow: hidden;
+}
+
+.rewards  .logo{
+    width: 0.86rem;
+    height: 0.22rem;
+    background: url("./img/logo.png") center center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: 0.21rem ;
+    left : 1.17rem;
+}
