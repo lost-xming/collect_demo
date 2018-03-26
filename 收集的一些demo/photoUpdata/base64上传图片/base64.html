@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片资源上传</title>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/2.2.1/jquery.min.js"></script>
+    <script src="./exif.min.js" type="text/javascript"></script>
+    <script src="./processImg.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <h3>图片上传：</h3>
+    <div class="up-id">
+        <img id="showimage1" src="" alt="">
+        <input id="upface1" class="UpFaceInput" type="file">
+    </div>
+</body>
+<script>
+    //按钮 显示图片节点  图片质量
+    compressImg('upface1', 'showimage1', 640, function (src) {
+        console.log(src)
+        var imgUrl = src.split(',')[1]
+        $.post("http://www.daoxila.com/GongJu/activity/1.0/marriage/down_base64", { imgUrl: imgUrl }, function (data) {
+            console.log('上传并下载：' + JSON.stringify(data))
+        })
+    });
+</script>
+
+</html>

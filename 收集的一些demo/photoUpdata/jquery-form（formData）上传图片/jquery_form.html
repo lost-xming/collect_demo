@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery form 表单请求信息</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.form/4.2.2/jquery.form.min.js"></script>
+</head>
+
+<body>
+    <form id="tf" action="http://www.daoxila.com/GongJu/activity/1.0/marriage/upload" method="post" enctype="multipart/form-data"
+        name="upload_form">
+        <input name="photo" type="file" multiple accept="image/png,image/jpeg,video/mp4,audio/mp3" />
+    </form>
+
+    <input type="button" value="提" class="btn-upload" />
+    <script>
+        $(".btn-upload").click(function () {
+            $("#tf").ajaxSubmit(function () {
+                console.log("11111");
+            });
+        })
+    </script>
+</body>
+
+</html>
