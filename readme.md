@@ -19,4 +19,18 @@
 	重新规划，适时调整，更好的前行。
 	勿忘初心，才能方得始终！
 
-### 此仓库有些乱
+## 包含项
+
+> 小船雨滴动画效果 boat-raindrop-demo （CSS HTML）
+> 
+> 3D-canvas 球体变色粒子效果 canvas-spherical-particles-dome
+> 
+> 3D-js 球面粒子效果 html5-psychospher-ball
+> 
+> 本地nodeJS文件夹服务应用 htmlStaticServer
+> 
+> 喜帖Demo invitation
+> 
+> 两款不同的类型图片上传组件 photoUpdata
+> 
+> VUE 后台demo vue_Backstage
