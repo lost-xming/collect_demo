@@ -1,0 +1,21 @@
+/*fanye*/
+@-webkit-keyframes fanye{
+  from{
+    -webkit-transform:translate3d(-50%,0.6rem,0);
+  }
+  to{
+    -webkit-transform:translate3d(-50%,0,0);
+  }
+}
+
+.fanye {
+  width: 1rem;
+  height: .5rem;
+  position: fixed;
+  bottom: .7rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -webkit-animation: fanye 1.5s ease-out 1s infinite normal both;
+  animation: fanye 1.5s ease-out 1s infinite normal both;
+  z-index: 60;
+}

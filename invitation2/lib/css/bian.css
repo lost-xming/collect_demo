@@ -1,0 +1,189 @@
+#playbox{
+display: block;
+width:90%;
+height:90%;
+opacity:0.9;
+}
+
+.on {
+-webkit-animation: rotate 4s 0s infinite;
+}
+
+@-webkit-keyframes rotate {
+0% {}
+100% {
+  -webkit-transform: rotate(360deg);
+}
+}
+
+.bian {
+  position: fixed;
+  top: 1rem;
+  right: .3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.bian li {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  position: relative;
+  margin-top: .3rem;
+}
+
+.bian li a {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  font-size: 28px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: yueyuan
+}
+
+
+
+[data-dpr="3"] .bian li a {
+  font-size: 42px
+}
+
+[data-dpr="1"] .bian li a {
+  font-size: 14px
+}
+
+.bian li img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.styleMes{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display:none;
+}
+
+.styleMes .back{
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  font-size: .469rem;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  margin-left: -0.5rem;
+  z-index:55;
+}
+
+.styleMes .cover{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 85%;
+  height: 85%;
+  border-radius: .5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: radial-gradient(#222, #000);
+  background:url('http://album.xitie.net.cn/CD147999486288767BQMk_TkXPJ4s6yb_12.jpg-album') no-repeat;
+  background-size:100% 100%;
+  -webkit-filter: grayscale(100%);
+}
+
+.styleMes .cover_2{
+  background: rgba(0,0,0,0.5); 
+  border-radius: .5rem;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:50;
+}
+
+.styleMes .cover .title{
+  font-size: 40px;
+  color: #fff;
+  margin-top: 15%;
+  position:relative;
+  z-index:55;
+}
+[data-dpr="3"] .styleMes .cover .title {
+  font-size: 60px
+}
+
+[data-dpr="1"] .styleMes .cover .title {
+  font-size: 20px
+}
+.styleMes .cover ul{
+  display: inline-block;
+  min-width: 69%;
+  position:relative;
+  z-index:55;
+}
+.styleMes .cover ul li{
+  margin-top: 8%;
+  font-size: 30px;
+  color: #fff;
+  padding: 0 10%;
+}
+
+.styleMes .cover ul li .car i{
+  padding-right: .2rem
+}
+
+.styleMes .cover ul li span{
+  margin-top: 2%;
+  display: block;
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 2px
+}
+[data-dpr="3"] .styleMes .cover ul li span {
+  font-size: 36px
+}
+
+[data-dpr="1"] .styleMes .cover ul li span {
+  font-size: 12px
+}
+[data-dpr="3"] .styleMes .cover ul li {
+  font-size: 48px
+}
+
+[data-dpr="1"] .styleMes .cover ul li  {
+  font-size: 16px
+}

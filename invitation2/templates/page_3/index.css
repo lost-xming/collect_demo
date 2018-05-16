@@ -1,0 +1,237 @@
+.page_3 {
+  background: url("http://file.xitie.net.cn/165bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page_3 .bg5 {
+  width: 86%;
+  height: 81%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -6%;
+  margin: auto;
+  z-index: 19
+}
+
+.page_3 .pc{
+  width: 73%;
+  height: 74%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -6%;
+  margin: auto;
+  z-index: 15;
+  overflow:hidden;
+}
+.page_3 .pc .pic {
+    width: 118%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+
+.page_3 .word {
+  width: 73%;
+  height: 18%;
+  position: absolute;
+  top: 56%;
+  left: 0;
+  right: 0;
+  bottom: -6%;
+  margin: auto;
+  z-index: 15;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 2% 0;
+  text-align: end;
+}
+
+.page_3 .word span {
+  width: 95%;
+  padding: 0 3%;
+  font-size: 24px;
+  color: #7b5700;
+  font-family: '微软雅黑';
+  text-shadow: #7b5700 0 0 .08rem;
+  display: inline-block
+}
+
+[data-dpr="3"] .page_3 .word span {
+  font-size: 36px
+}
+
+[data-dpr="1"] .page_3 .word span {
+  font-size: 12px
+}
+
+.page_3 .bg3 {
+  width: 82%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 18;
+  left: 0;
+  bottom: -6%;
+  right: 0;
+  margin: auto
+}
+
+.page_3 .zi {
+  width: 3.6rem;
+  height: 1.4rem;
+  position: absolute;
+  top: .5rem;
+  left: 4rem;
+  z-index: 10
+}
+
+.page_3 .yuan {
+  width: 6rem;
+  position: absolute;
+  top: 0;
+  right: 0
+}
+
+.page_3 .zuoshang1 {
+  width: 15%;
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  z-index: 20
+}
+
+.page_3 .zuoshang2 {
+  width: 16%;
+  position: absolute;
+  top: 14%;
+  left: 8%;
+  z-index: 21
+}
+
+.page_3 .zuoshang3 {
+  width: 26%;
+  position: absolute;
+  top: 9%;
+  left: 0;
+  z-index: 18
+}
+
+.page_3 .zuoshang4 {
+  width: 20%;
+  position: absolute;
+  top: 6%;
+  left: 9%;
+  z-index: 20
+}
+
+.page_3 .zuoshang5 {
+  width: 23%;
+  position: absolute;
+  top: 11%;
+  left: 16%;
+  z-index: 19
+}
+
+.page_3 .youshang1 {
+  width: 22%;
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  z-index: 21;
+  height: 15%
+}
+
+.page_3 .youshang2 {
+  width: 16%;
+  position: absolute;
+  top: 11%;
+  right: 17%;
+  z-index: 20
+}
+
+.page_3 .youshang3 {
+  width: 16%;
+  position: absolute;
+  top: 6%;
+  right: 9%;
+  z-index: 19
+}
+
+.page_3 .zuoxia1 {
+  width: 18%;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: 22
+}
+
+.page_3 .zuoxia2 {
+  width: 13%;
+  position: absolute;
+  bottom: 6%;
+  left: 17%;
+  z-index: 20
+}
+
+.page_3 .zuoxia3 {
+  width: 13%;
+  position: absolute;
+  bottom: 14%;
+  left: 3%;
+  z-index: 19
+}
+
+.page_3 .youxia1 {
+  width: 20%;
+  position: absolute;
+  bottom: 4%;
+  right: 1%;
+  z-index: 22;
+  height: 14%
+}
+
+.page_3 .youxia2 {
+  width: 15%;
+  position: absolute;
+  bottom: 5%;
+  right: 15%;
+  z-index: 21
+}
+
+.page_3 .youxia3 {
+  width: 23%;
+  position: absolute;
+  bottom: 1%;
+  right: 17%;
+  z-index: 19
+}
+
+.page_3 .zhong1 {
+  position: absolute;
+  top: -5%;
+  left: -74%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 25;
+  width: 15%
+}
+
+.page_3 .zhong2 {
+  position: absolute;
+  top: 7%;
+  left: -78%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 25;
+  width: 14%;
+  height: 10%
+}

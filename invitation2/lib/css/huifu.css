@@ -1,0 +1,838 @@
+article,aside,details,footer,header,nav,section {
+	display: block
+}
+html,body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,label,textarea,p {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: none
+}
+body {
+	font: 400 14px/1.5 Arial
+	padding:0;
+	margin:0;
+}
+a {
+	text-decoration: none;
+	color: #666
+}
+em,i {
+	font-style: normal
+}
+img {
+	border: none;
+	vertical-align: middle
+}
+ol,ul {
+	list-style: none
+}
+input[type=text],input[type=password],input[type=number],input[type=email],input[type=search],input[type=tel] {
+	vertical-align: middle;
+	outline: 0;
+	-webkit-appearance: none;
+	-webkit-user-select: text
+}
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {
+	color: #9e9e9e;
+}
+select {
+	outline: 0;
+	-webkit-appearance: none
+}
+textarea {
+	border: 1px solid #d7d7d7;
+	outline: 0;
+	-webkit-user-select: text
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+.mt10 {
+	margin-top: 10px
+}
+.mb10 {
+	margin-bottom: 10px
+}
+.ml10 {
+	margin-left: 10px
+}
+.mr10 {
+	margin-right: 10px
+}
+.r3 {
+	-webkit-border-radius: 3px;
+	border-radius: 3px
+}
+.r50 {
+	-webkit-border-radius: 50%;
+	border-radius: 50%
+}
+.none {
+	display: none!important
+}
+.userselect {
+	-webkit-user-select: text
+}
+.fl {
+	float: left
+}
+.fr {
+	float: right
+}
+.clearfix:after {
+	display: block;
+	content: '';
+	clear: both;
+	visibility: hidden
+}
+.flex_col_box {
+	display: -webkit-box
+}
+
+.flex_col_box .flex_col {
+	-webkit-box-flex: 1
+}
+
+body {
+	color: #000;
+	font-family:'microsoft yahei';
+/*    background:url(http://file.xitie.net.cn/62_bg.png) repeat;*/
+}
+* {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-ms-touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+}
+ @-webkit-keyframes x-spin {
+	 0% { -webkit-transform:rotate(0deg)}
+	 100% { -webkit-transform:rotate(360deg)}
+}
+ @-moz-keyframes x-spin {
+	 0% { -moz-transform:rotate(0deg)}
+	 100% { -moz-transform:rotate(360deg)}
+}
+ @-o-keyframes x-spin {
+	 0% { -o-transform:rotate(0deg)}
+	 100% { -o-transform:rotate(360deg)}
+}
+ @-ms-keyframes x-spin {
+	 0% { -ms-transform:rotate(0deg)}
+	 100% { -mos-transform:rotate(360deg)}
+}
+ keyframes x-spin {
+	 0% { transform:rotate(0deg)}
+	 100% { transform:rotate(360deg)}
+}
+
+.nav_top {
+	position:fixed;
+	top:80px;
+	right:20px;
+	z-index:9999;
+	border-radius:50%;
+	 -webkit-transform-style:preserve-3d;
+	 -webkit-animation-name:x-spin;
+	 -webkit-animation-duration:1s;
+	 -webkit-animation-iteration-count:infinite;
+	 -webkit-animation-timing-function:linear;
+}
+.nav_top label{
+	display: block;
+	float: right;
+	margin:0px 0px;
+	width: 32px;
+	height: 32px;
+	background: url(http://file.xitie.net.cn/62_music_off.png) no-repeat;
+	background-size: auto 32px;
+	cursor:pointer;
+	-webkit-tap-highlight-color:raba(0,0,0,0);
+}
+.nav_top label.on{
+	background: url(http://file.xitie.net.cn/62_music_on.png) no-repeat;
+	background-size: auto 32px;
+}
+.resize{
+    position:absolute;
+	width:20px;
+	height:15px; 
+	margin-left:-10px;
+	bottom:4%; 
+	left:50%;
+	z-index:9999;
+	-webkit-animation: bounce 1s .2s linear infinite;
+	-moz-animation: bounce 1s .2s linear infinite;
+	-o-animation: bounce 1s .2s linear infinite;
+	-ms-animation: bounce 1s .2s linear infinite;
+	animation: bounce 1s .2s linear infinite;
+}
+@-webkit-keyframes bounce {
+	0% {-webkit-transform: translateY(0);} 
+	50% {-webkit-transform: translateY(-10px);} 
+	100% {-webkit-transform: translateY(0);}}
+@-zom-keyframes bounce {
+	0% {-zom-transform: translateY(0);} 
+	50% {-zom-transform: translateY(-10px);} 
+	100% {-zom-transform: translateY(0);}}
+@-ms-keyframes bounce {
+	0% {-ms-transform: translateY(0);} 
+	50% {-ms-transform: translateY(-10px);} 
+	100% {-ms-transform: translateY(0);}}
+@-o-keyframes bounce {
+	0% {-o-transform: translateY(0);} 
+	50% {-o-transform: translateY(-10px);} 
+	100% {-o-transform: translateY(0);}}
+@keyframes bounce {
+	0% {transform: translateY(0);} 
+	50% {transform: translateY(-10px);} 
+	100% {transform: translateY(0);}
+}
+.slide_01{
+    width:100%;
+	height:100%;
+	position:relative;
+	padding:2% 0;
+	text-align:left;
+	font-family:'microsoft yahei';
+	position: relative;
+
+}
+.slide_02,
+.slide_03,
+.slide_04,
+.slide_05,
+.slide_06,
+.slide_07{
+    width:100%;
+	height:100%;
+	position:relative;
+	padding:0 0 2% 0;
+}
+.slide_08{
+    width:100%;
+	height:100%;
+    background:url(http://file.xitie.net.cn/62_wedding_page.jpg) no-repeat;
+	background-size:100% 100%;
+	position:relative;
+}
+
+.slide_09{
+/*    width:100%;
+	height:100%;
+	background:#fff;*/
+}
+.marry_title{
+    clear:both;
+	width:100%;
+	line-height:60px;
+	color:#fdefb7;
+	font-size:26px;
+	margin:0px auto 40px auto;
+	padding:5% 0 6% 26%;
+	text-align:left;
+	background:url(http://file.xitie.net.cn/62_sub_tit.png) center bottom no-repeat;
+	background-size:100% auto;
+}
+.ani {position: absolute;} 
+.splite{
+    width:100%;
+    height:10px;
+	background:url(http://file.xitie.net.cn/62_splite.png) center no-repeat;
+	background-size:auto 10px;
+	margin:10px auto;
+	text-align:center;
+}
+.wish_sp{
+    width:100%;
+    height:6px;
+	background:url(http://file.xitie.net.cn/62_wishsp.png) center no-repeat;
+	background-size:auto 6px;
+	margin:10px auto;
+	text-align:center;
+}
+
+/*---------------------------------------------1th*/
+.wedding{
+    clear:both;
+	width:100%;
+	font-size:16px;
+	margin:0px auto 0px auto;
+	padding:16% 0 6% 0;
+	background: url(http://file.xitie.net.cn/62_wedding.png) center bottom no-repeat;
+	background-size: 100% auto;
+}
+
+.inviter{
+	text-align:center;
+	color:#fdefb7;
+	font-size:22px;
+	margin:0px auto;
+}
+.inviter span{
+	color:#fdefb7;
+	font-size:22px;
+	padding:0px 5px;
+}
+.arrow_down{
+    text-align:center;
+	margin:0 0 10px 0;
+}
+.tx{
+    width:100%;
+	border:2px #fdefb7 solid;
+	margin:10px auto 10px auto;
+	position:relative;
+}
+.name_box{
+    width:100%;
+	font-size:22px;
+	color:#fdefb7;
+	margin:0px auto;
+	text-align:center;
+	background: url(http://file.xitie.net.cn/62_namebg.png) center no-repeat;
+	background-size: 100% auto;
+	padding:2% 0 0 0;
+}
+.name_box .love{
+    position:relative;
+    display:inline-block;
+	top:0px;
+	width:20px;
+	height:18px;
+	background: url(http://file.xitie.net.cn/62_and.png) center no-repeat;
+	background-size: 100% auto;
+}
+.name_box label{
+	padding:0px 5px;
+	color:#fdefb7;
+}
+
+.time,
+.address{
+    color:#fdefb7;
+	padding:2px 0px;
+	text-align:center;
+}
+/*---------------------------------------------2th*/
+.word_box{
+    min-height:160px;
+	color:#fdefb7;
+	font-size:16px;
+	line-height:26px;
+	margin: 20px auto 20px auto;
+	padding:0 10%;
+	text-align:left;
+}
+.word_box02{
+	color:#fff;
+	font-size:16px;
+	line-height:26px;
+	margin: 40px auto 0px auto;
+	padding:0 10%;
+	text-align:left;
+}
+
+/*---------------------------------------------3th*/
+.tab_img_list{
+	width:100%;
+	border-collapse:collapse;
+	background:#fdefb7;
+	/*border:2px #fdefb7 solid;*/
+}
+.tab_img_list td{
+	vertical-align:top;
+	padding:0;
+	margin:0;
+}
+.tab_img_list img{
+	width: 100%;
+	padding:0px;
+	border:2px #fdefb7 solid;
+}
+
+/*---------------------------------------------4th*/
+.video{
+   clear:both;
+   width:90%;
+   margin:50px auto 0px auto;
+}
+
+/*---------------------------------------------5th*/
+.dh_area{
+    padding:0px 30px;
+}
+.slide_05 strong{
+    clear:both;
+    display:block;
+	color:#fdefb7;
+	font-size:16px;
+	margin:0px auto;
+	text-align:left;
+	padding:0px 5%;
+}
+.phone{
+	margin:20px 0px;
+}
+.xn_tel,.xl_tel{   
+	line-height:46px;    
+	color:#fff;
+	font-size:16px;
+	border-radius:4px;
+	width:49%;
+	text-align:left;
+	padding-left:10px;
+}
+.xn_tel{float:right;background:#ff6260;}
+.xl_tel{float:left;background:#fd9821;}
+
+.xn_tel i,.xl_tel i{
+   float:left;
+   display:inline-block;
+   width:18px;
+   height:24px;
+   background:url(http://file.xitie.net.cn/62_icons.png) no-repeat 0 0;
+   background-size: 24px auto;
+   margin:12px 0px 0px 3px;
+}
+.ul_item{
+    clear:both;
+	margin:10px auto;
+	padding:2% 5% 5% 5%;
+	border-radius:4px;  
+	text-align:left;
+	border:1px #fdefb7 solid;
+}
+.ul_item li{
+	line-height:22px;
+	font-size:14px;
+	font-weight:bold;
+	color:#fdefb7;
+	padding:4px 0px;
+}
+.ul_item li h2{
+    clear:both;
+    color:#fff;
+	line-height:30px;
+	font-size:16px;
+	text-align:left;
+	margin-top:5px;
+}
+.ul_item li a{
+	color:#fff;
+}
+.ul_item li i{
+    display:inline-block;
+    float:left;
+    width:35px;
+    height:26px;
+}
+.ul_item li:first-child i{
+    background:url(http://file.xitie.net.cn/62_map_icons.png) no-repeat 3px 0px;
+    background-size:80% auto;
+}
+.ul_item li:nth-child(2) i {
+    background:url(http://file.xitie.net.cn/62_map_icons.png) no-repeat 0 -42px;
+    background-size:80% auto;
+}
+.ul_item li:last-child i {
+    background:url(http://file.xitie.net.cn/62_map_icons.png) no-repeat 4px -90px;
+    background-size:80% auto;
+}
+/*---------------------------------------------6th*/
+.map_area{
+	padding:0 10%;
+	margin-top:30px;
+}
+.map_area img{
+     max-height:280px;
+}
+.map_btn{
+    width:110px;
+	margin:30px auto 0px auto;
+    line-height:36px;
+    background:#fd9821;
+	border-radius:4px;
+	text-align:left;
+}
+.map_btn a{display:block;color:#fff;}
+.map_btn a i{
+   float:left;
+   display:inline-block;
+   width:23px;
+   height:23px;
+   background:url(http://file.xitie.net.cn/62_icons.png) no-repeat 0 -108px;
+   background-size: 23px auto;
+   margin:7px 3px 0px 6px;
+}
+
+/*---------------------------------------------7th*/
+.ul_process{
+	margin:0px auto;
+	margin-top:20px;
+}
+.ul_process ul{width:80%;margin:0px auto;}
+.ul_process li{
+	clear:both;
+	width:100%;
+	padding:10px 0px;
+	color:#fdefb7;
+	font-size:14px;
+	text-align:left;
+}
+.ul_process li div{
+    clear:both;
+	line-height:26px;
+	font-size:16px;
+	text-align:left;
+    margin-bottom:5px;
+}
+
+.ul_process li i{
+   display:block;
+   float:left;
+   width:30px;
+   height:30px;
+   background:url(http://file.xitie.net.cn/62_icons.png) no-repeat 0 -72px;
+   background-size:30px auto;
+   margin-right:5px;
+}
+
+.col_yel{color:#fff;}
+
+/*---------------------------------------------7th*/
+.wedding_title{
+	width:80%;
+	padding:10% 0;
+	margin:0px auto;
+	text-align:center;
+  /* background:url(http://file.xitie.net.cn/62_wedding_bg.png) no-repeat;
+   background-size:80% auto;*/
+}
+.left_btn,
+.right_btn{
+    position:absolute;
+	display:block;
+	width:42%;
+	height:10%;
+	background:#ddd;
+	color:#fff;
+	opacity:0.3;
+}
+.left_btn{
+	left:0;
+	bottom:22%;
+	border-radius:0 50px 50px 0;
+}
+.right_btn{
+	right:0;
+	bottom:22%;
+	border-radius: 50px 0 0 50px;
+}
+.left_word,
+.right_word{
+    position:absolute;
+	display:block;
+	height:10%;
+	padding-top:4%;
+	color:#fff;
+	font-size:22px;
+}
+.left_btn a,
+.right_btn a,
+a.left_word,
+a.right_word{height:10%;display:block;cursor:print;}
+.left_word{
+	left:4%;
+	bottom:22%;
+}
+.right_word{
+	right:4%;
+	bottom:22%;
+}
+.left_word i{
+    display:block;
+    width:16px;
+	height:30px;
+    float:right;
+    background:url(http://file.xitie.net.cn/62_last_arrow.png) no-repeat 0 0;
+    background-size:180% auto;
+	padding:0px 0px 0px 0px;
+	margin:5px 0px 0px 20px;
+}
+.right_word i{
+    display:block;
+	float:left;
+    width:16px;
+	height:30px;
+    float:left;
+    background:url(http://file.xitie.net.cn/62_last_arrow.png) no-repeat -14px 0;
+    background-size:180% auto;
+	padding:0px 0px 0px 0px;
+	margin:5px 20px 0 0;
+}
+/*---------------------------------------------8th*/
+.wish_area{
+    clear:both;
+	padding:10px 10px;
+	margin:0px;
+    font-size:14px;
+	font-family:'microsoft yahei';
+}
+.wish_btn{
+    clear:both;
+	width:180px;
+	margin:20px auto 10px auto;
+	padding:0px 50px;
+	text-align:center;
+}
+.wish_btn a{
+    display:block;
+	height:36px;
+	line-height:36px;
+	color:#fff;
+	background:#999999;
+	border-radius:6px;
+}
+.fname,
+.fselect,
+.send_wishes{
+   clear:both;
+   padding:0px 20px;
+   margin:10px 0px;
+}
+.send_wishes textarea{
+   width:100%; 
+   background:#fdefb7;
+   border:1px #fdefb7 solid;
+   border-radius:6px;
+   color:#555;
+   padding:5px;
+   height: 60px;
+}
+.fname input{
+   clear:both;
+   width:100%;
+   border:1px #fdefb7 solid;
+   color:#555;
+   background:#fdefb7;
+   margin:0px auto;
+   padding:10px 5px;
+   border-radius:6px;
+}
+.fname ::-webkit-input-placeholder,
+.send_wishes ::-webkit-input-placeholder{ color:#BBBBBB; }
+.fname ::-moz-placeholder,
+.send_wishes ::-moz-placeholder{ color:#BBBBBB; } /* firefox 19+ */
+.fname :-ms-input-placeholder,
+.send_wishes :-ms-input-placeholder { color:#BBBBBB; } /* ie */
+.fname input:-moz-placeholder,
+.send_wishes  input:-moz-placeholder{ color:#BBBBBB; }
+
+.fselect select{
+   clear:both;
+   width:100%;
+   height:40px;
+   line-height:40px;
+   border:1px #fdefb7 solid;
+   color:#555;
+   background:#fdefb7 url(http://file.xitie.net.cn/62_fselect.png) 99% 50% no-repeat;
+   background-size:30px 30px;
+   margin:0px auto;
+   padding:0px 5px;
+   border-radius:6px;
+}
+.please{
+   clear:both;
+   color:#555;
+   font-size:12px;
+   padding:5px 20px 5px 20px;
+   text-align:left;
+}
+.f_span{
+   position:absolute;
+   top:16px;
+   left:30px;
+   color:#fff;
+}
+.clear,
+.ul_process:after,
+.phone:after,
+.wish_area ul:after,
+.ul_friend li:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+
+.bless_tit{
+  color:#555;
+  height:30px;
+  line-height:30px;
+  border-bottom:1px #ccc solid;
+  margin:0px 0px 30px 0px;
+  text-align:center;
+  position:relative;
+}
+.bless_tit span{
+    position:absolute;
+	bottom:-15px;
+	left:50%;
+	background:#fff;
+	padding:0px 20px;
+    text-align:center;
+	margin-left:-50px;
+}
+.right{float:right;}
+
+.ul_friend{
+	/*height:417px;*/
+	/*overflow-y:scroll;*/
+	padding:0px 20px;
+}
+.ul_friend li{
+	clear:both;
+    display:block;
+    color:#555;
+	line-height:24px;
+	padding:8px 20px 8px 20px;
+	margin:10px 0px;
+	text-align:left;
+    position:relative;
+	border-bottom:1px #EEEEEE solid;
+}
+.ul_friend li .bless{
+    margin-left:43px;
+}
+.ul_friend li p{
+   color:#fd9821;
+	margin:0;
+	padding:0;
+}
+.ul_friend li span{
+	color:#666;
+	font-size:12px;
+	margin:0;
+	padding:0;
+}
+.ul_friend li img{
+   display:block;
+   float:left;
+   width:53px;
+   height:53px;
+   position:absolute;
+   top:50%;
+   left:0px;
+   margin:-28px 0px 0px 0px;
+   border-radius:50%;
+}
+a.bless_more{
+   clear: both;
+   display:inline-block;
+   width:100%;
+   color:#fd9821;
+   font-size:12px;
+   text-align:center;
+   margin:0px auto;
+   padding:20px 0px 60px 0px;
+}
+/*::-webkit-scrollbar {height:10px; width:20px;background:url(http://file.xitie.net.cn/sroll_line.png) no-repeat;background-size:20px auto;}
+::-webkit-scrollbar-button {height:20px;width:20px;}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {display:block;height:20px;width:20px;}
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {display:none;}
+::-webkit-scrollbar-track:vertical,
+::-webkit-scrollbar-track:horizontal{background:url(http://file.xitie.net.cn/sroll_line.png) no-repeat 0px -18px;background-size:20px auto;border:0;}
+::-webkit-scrollbar-thumb {background:url(http://file.xitie.net.cn/sroll_thumb.png) repeat-y;background-size:20px auto;padding-top:10px;}*/
+
+
+.copy{position:absolute;bottom:10px;left:0;width:100%;text-align:center;}
+.copy a{clear:both;color:#fff;font-size:14px;text-align:center;text-shadow:2px 2px 10px #000;}
+
+.wish_btn_new{
+	text-align: center;
+	margin-top: 20px;
+}
+.wish_btn_new a {
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background: #999999;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.link_ad{
+	background: #E7E7E7;
+	color: #333333;
+	padding: 10px;
+	text-align: center;
+	font-size: 13px;
+}
+/**/
+.weui_mask{display: none;position: fixed;z-index: 1;display:none;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0,0,0,.6);}
+.weui_dialog {
+	display: none;
+    position: fixed;
+    z-index: 13;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background-color: #fafafc;
+    text-align: center;
+    border-radius: 3px;
+}
+.weui_dialog_title {
+    font-weight: 400;
+    font-size: 17px;
+}
+.weui_dialog_hd {
+    padding: 1.2em 0 .5em;
+}
+.weui_dialog_bd {
+    padding: 0 20px;
+    font-size: 15px;
+    color: #888;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 25px;
+}
+.weui_dialog_ft {
+    position: relative;
+    line-height: 42px;
+    margin-top: 20px;
+    font-size: 17px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.weui_dialog_ft:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #d5d5d6;
+    color: #d5d5d6;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+}
+.weui_btn_dialog.primary {
+    color: #0bb20c;
+}
+.weui_dialog_ft a {
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    color: #3cc51f;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

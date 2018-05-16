@@ -1,0 +1,250 @@
+.page_1 {
+  background: url("http://file.xitie.net.cn/165bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.page_1 .shuye {
+  width: 10rem;
+  height: 17rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  top: -.5rem;
+  z-index: 5
+}
+
+.page_1 .zhongjian {
+  width: 8rem;
+  height: 13rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: url("http://file.xitie.net.cn/165bg2.jpg") no-repeat;
+  background-size: 100% 100%;
+  -webkit-box-shadow: 0 0 .3rem .08rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 .3rem .08rem rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.page_1 .zhongjian .zuoshang1 {
+  width: 2.7rem;
+  position: absolute;
+  top: -1rem;
+  left: -.8rem;
+  z-index: 10
+}
+
+.page_1 .zhongjian .zuoshang2 {
+  width: 1.7rem;
+  height: 2.2rem;
+  position: absolute;
+  top: -.8rem;
+  left: 1rem;
+  z-index: 10
+}
+
+.page_1 .zhongjian .zuoshang3 {
+  width: 2rem;
+  position: absolute;
+  top: .9rem;
+  left: -1rem;
+  z-index: 5
+}
+
+.page_1 .zhongjian .youshang1 {
+  width: 1.7rem;
+  position: absolute;
+  top: .1rem;
+  right: -1rem;
+  z-index: 10
+}
+
+.page_1 .zhongjian .youshang2 {
+  width: 2.5rem;
+  position: absolute;
+  top: -1.4rem;
+  right: -1rem;
+  z-index: 5
+}
+
+.page_1 .zhongjian .youshang3 {
+  width: 1.55rem;
+  position: absolute;
+  height: 1.8rem;
+  top: -1.1rem;
+  right: .9rem;
+  z-index: 5
+}
+
+.page_1 .zhongjian .youshang4 {
+  width: 1.5rem;
+  position: absolute;
+  top: -2.2rem;
+  right: .7rem;
+  z-index: 4
+}
+
+.page_1 .zhongjian .zuoxia1 {
+  width: 3rem;
+  position: absolute;
+  bottom: -.7rem;
+  left: -.7rem;
+  z-index: 4
+}
+
+.page_1 .zhongjian .zuoxia2 {
+  width: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  left: -.8rem;
+  z-index: -1
+}
+
+.page_1 .zhongjian .youxia1 {
+  width: 2rem;
+  position: absolute;
+  bottom: 0;
+  right: -.7rem;
+  z-index: 4
+}
+
+.page_1 .zhongjian .youxia2 {
+  width: 3rem;
+  position: absolute;
+  bottom: -1rem;
+  right: -.5rem;
+  z-index: 4
+}
+
+.page_1 .zhongjian .youxia3 {
+  width: 2rem;
+  position: absolute;
+  bottom: -1.2rem;
+  right: 1.2rem;
+  z-index: 3
+}
+
+.page_1 .zhongjian .youxia4 {
+  width: 1rem;
+  position: absolute;
+  bottom: 1.2rem;
+  right: -.8rem;
+  z-index: 3
+}
+
+.page_1 .zhongjian .tit {
+  margin-top: 1rem;
+}
+
+.page_1 .zhongjian .tit img {
+  width: 6rem
+}
+
+.page_1 .zhongjian .xinRen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 7.5rem;
+}
+
+.page_1 .zhongjian .xinRen .xin1 {
+  width: .6rem
+}
+
+.page_1 .zhongjian .xinRen .xin2 {
+  width: 1rem
+}
+
+.page_1 .zhongjian .xinRen span {
+  font-size: 44px;
+  color: RGB(94, 40, 86);
+  font-family: '微软雅黑';
+}
+
+[data-dpr="3"] .page_1 .zhongjian .xinRen span {
+  font-size: 66px
+}
+
+[data-dpr="1"] .page_1 .zhongjian .xinRen span {
+  font-size: 22px
+}
+
+.page_1 .zhongjian .xinRen .xinlang {
+  padding-left: .2rem
+}
+
+.page_1 .zhongjian .xinRen .xinniang {
+  padding-right: .2rem
+}
+
+.page_1 .zhongjian .detail {
+  padding: .3rem;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 32px;
+  color: RGB(122, 77, 9);
+  font-family: '微软雅黑';
+  text-align: center;
+  margin: 0 .5rem 1rem;
+  position: relative;
+}
+
+[data-dpr="3"] .page_1 .zhongjian .detail {
+  font-size: 48px
+}
+
+[data-dpr="1"] .page_1 .zhongjian .detail {
+  font-size: 16px
+}
+
+.page_1 .zhongjian .detail div {
+  padding: .1rem 0
+}
+
+.page_1 .zhongjian .detail .place {
+  padding: .1rem .2rem
+}
+
+.page_1 .zhongjian .detail img {
+  width: 1.8rem;
+  position: absolute;
+  top: -.7rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%)
+}

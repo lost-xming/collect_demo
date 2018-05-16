@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>送上祝福</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link href='css/huifu.css' rel='stylesheet' type='text/css' />
+<script src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<div class="swiper-slide">
+<section class="slide_09">
+
+<!-- <div><img src="" width="100%"></div> -->
+<div><img src="http://file.xitie.net.cn/62_blessing.png" width="100%"></div>
+<div class="wish_area">
+<div class="fname"><input type="text" placeholder="您的名字" name="userName" id="userName" value=""></div>
+<div class="fselect">
+<select name="select">
+  <option>是否赴宴</option>
+  <option>赴宴</option>
+  <option>待定</option>
+</select>
+</div>
+<div class="fselect">
+<select name="is_join" id="is_join">
+  <option value="0">赴宴人数</option>
+  <option value="1">1人</option>
+  <option value="2">2人</option>
+  <option value="3">3人</option>
+  <option value="4">4人</option>
+  <option value="5">5人</option>
+  <option value="6">6人</option>
+  <option value="7">7人</option>
+  <option value="8">8人</option>
+  <option value="9">9人</option>
+  <option value="10">10人</option>
+</select>
+</div>
+
+<div class="send_wishes">
+<textarea name="content" id="content" placeholder="新婚快乐，祝恩爱长长久久。"></textarea>
+</div>    
+<!--<div class="wish_sp"></div>-->
+<div class="please" onclick="location.reload()">输入您的手机号码，宴会前一天我们会有贴心的短信提醒</div>				
+<div class="fname"><input type="text" name="telephone" id="telephone" placeholder="在这里留下电话" value=""></div>
+
+<div class="wish_btn">
+<a href="javascript:;" onclick="submit2();">提交</a>
+</div>
+   </div>
+
+   <div class="bless_area">
+<div class="bless_tit"><span>好友祝福</span></div>
+<div class="ul_friend">
+<ul id="ul_zf_list">
+</ul>
+</div>	
+<a href="javascript:;" onclick="load_more_bless()" class="bless_more" id="btn_load_more">查看更多祝福</a>
+<input type="hidden" id="page_num" value="1">
+   </div>
+<!-- href='http://app.xitie.net.cn/web.php?accid=AC138763524113306497' -->
+   <div class="link_ad" ><a  class="iMake">这么漂亮的请帖—》我也来制作</a></div>
+
+</section>
+</div>
+
+
+<div class="weui_mask" id="weui_mask"></div>
+<div class="weui_dialog" id="weui_dialog">
+<div class="weui_dialog_hd"><strong class="weui_dialog_title">提交成功</strong></div>
+<div class="weui_dialog_bd">
+<img width="150px" src="templates/end_1/images/qrcode_create.png">
+<br>
+长按二维码关注公众号后<br>
+宴会前一天可获得微信提醒
+</div>
+<div class="weui_dialog_ft">
+<a href="javascript:;" class="weui_btn_dialog primary" id="weui_btn_dialog">知道了</a>
+</div>
+</div>
+<div class="iMakeImg">
+    <img src="templates/end_1/images/qrcode_create.png"  class="imgs"/>
+</div>
+<style type="text/css">
+    .iMakeImg{
+        display:none;
+        position:fixed;
+        z-index:600;
+        top:0;
+        left:0;
+        width:100vw;
+        height:100vh;
+        background:rgba(0,0,0,0.6)
+    }
+
+    .iMakeImg .imgs{
+        width: 70%;
+        position:absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform:translate(-50%,-50%);
+        z-index:60
+    }
+</style>
+<script type="text/javascript">
+    $(".iMake").click(function(e) {
+        $(".iMakeImg").show();
+        e.stopPropagation();
+    });
+
+    $(".imgs").click(function(e) {
+        e.stopPropagation();
+    });
+
+    $(".iMakeImg").click(function() {
+        $(".iMakeImg").hide();
+    });
+</script>
+<script type="text/javascript">
+function submit2(){
+    var userName = $("#userName").val();
+    var telephone = $("#telephone").val();
+    var content = $("#content").val();
+    var is_join = $("#is_join").val();
+    if(userName.length<1){
+    alert("请输入姓名！");
+    return;
+    }
+    if(telephone.length<6){
+    alert("请输入电话号码！");
+    return;
+    }
+    if(content.length>50){
+    alert("内容不能大于50个字！");
+    return;
+    }
+    if(content.length<1){
+    alert("请输入祝福内容！");
+    return;
+    }
+    var obj = {
+      cid : "CD147999486288767BQMk",
+      is_join: is_join,
+      is_new: 1,
+      userName: userName,
+      telephone: telephone,
+      content: content
+    }
+    $.post("marry.php?do=word", obj,function(result){
+      // alert(result);
+      // form2.reset();
+      $("#content").val("");
+
+      var html_str = "";
+      var value = $.parseJSON(result);
+      if (value['uid']>0) {
+      var avatar_url = value['avatar'];
+      }else{
+      var avatar_url = "http://file.xitie.net.cn/31_tx.jpg";
+      }
+      html_str = '<li><div class="bless"><p><span class="right">' + value['created_date'] + '</span>' + value['username'] + '</p>' + value['word'] + '</div><img src="' + avatar_url + '" width="53"></li>';
+      //$("#ul_zf_list").append(html_str);
+      $("#ul_zf_list").prepend(html_str);
+      alert("提交成功");
+
+    });
+}
+
+//
+function submit_show_qrcode(){
+
+var userName = $("#userName").val();
+var telephone = $("#telephone").val();
+var content = $("#content").val();
+var is_join = $("#is_join").val();
+if(userName.length<1){
+alert("请输入姓名！");
+return;
+}
+if(telephone.length<6){
+alert("请输入电话号码！");
+return;
+}
+if(content.length>50){
+alert("内容不能大于50个字！");
+return;
+}
+if(content.length<1){
+alert("请输入祝福内容！");
+return;
+}
+var obj = {
+cid : "CD147999486288767BQMk",
+is_join: is_join,
+is_new: 1,
+userName: userName,
+telephone: telephone,
+content: content
+}
+$.post("marry.php?do=word", obj,function(result){
+$("#content").val("");
+
+var html_str = "";
+var value = $.parseJSON(result);
+if (value['uid']>0) {
+var avatar_url = value['avatar'];
+var is_subscribe = value['subscribe'];
+
+if(is_subscribe==0){
+$("#weui_mask").show();
+$("#weui_dialog").show();
+}else{
+alert("提交成功");
+}
+}else{
+var avatar_url = "http://file.xitie.net.cn/31_tx.jpg";
+alert("提交成功");
+}
+
+html_str = '<li><div class="bless"><p><span class="right">' + value['created_date'] + '</span>' + value['username'] + '</p>' + value['word'] + '</div><img src="' + avatar_url + '" width="53"></li>';
+$("#ul_zf_list").prepend(html_str);
+
+});
+}
+
+//
+    $("#weui_btn_dialog").bind("click", function () {
+        $("#weui_mask").hide();
+        $("#weui_dialog").hide();
+        event.stopPropagation();
+    });
+
+//
+window.page_num = parseInt($("#page_num").val());
+function load_more_bless(){
+
+  window.page_num ++;
+
+  $.ajax({
+     type: "GET",
+     url: 'marry.php?do=guestbook_list',
+     data: "cid=CD147999486288767BQMk&page="+window.page_num,
+     dataType:"json",
+     success: function(return_info){
+
+     		if (!return_info) {
+     			$("#btn_load_more").text("没有啦！");
+     		}else{
+          $.each(return_info,function(value_num,value){
+
+  var html_str = "";
+  if (value['uid']>0) {
+  var avatar_url = value['avatar'];
+  }else{
+  var avatar_url = "http://file.xitie.net.cn/31_tx.jpg";
+  }
+  html_str = '<li><div class="bless"><p><span class="right">' + value['created_date'] + '</span>' + value['username'] + '</p>' + value['word'] + '</div><img src="' + avatar_url + '" width="53"></li>';
+  $("#ul_zf_list").append(html_str);
+  });
+     		}
+     		
+     }
+  });
+}
+</script>
+
+
+<div style="display:none;"><script src='https://pw.cnzz.com/c.php?id=1254525698&l=2' language='JavaScript' charset='gb2312'></script></div>
+</body>
+</html>
