@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>图片本地预览裁切上传</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <script src="./jquery-1.7.2.min.js"></script>
+    <link  href="./cropper.css" rel="stylesheet">
+    <script src="./cropper.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 200px auto 0;
+            background-color: pink;
+            overflow: hidden;
+        }
+        #image {
+            display: block;
+            width: 100%;
+        }
+        .img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img id="image" src="./2.jpg">
+    </div>
+    <img src="" class="img" alt="">
+    <script>
+        var image = document.getElementById('image');
+        const cropper = new Cropper(image, {
+            aspectRatio: 1, // 图片宽高比例
+            viewMode: 0,    //裁剪框 只能在  2图片内移动   默认是0
+            // preview : $(".newImg"),    //截图的显示位置   型：String(jQuery选择器)，默认值''
+            crop: function(event) {     // 每次操作完成后执行
+                console.log(event.detail.x);
+                console.log(event.detail.y);
+                console.log(event.detail.width);
+                console.log(event.detail.height);
+                console.log(2222222222)
+                cropper.getCroppedCanvas();
+
+                cropper.getCroppedCanvas({  //  图片输出
+                    width: 300,
+                    height: 300,
+                    minWidth: 256,
+                    minHeight: 256,
+                    maxWidth: 4096,
+                    maxHeight: 4096,
+                    fillColor: '#fff',
+                    imageSmoothingEnabled: false,
+                    imageSmoothingQuality: 'high',
+                });
+
+
+                if (!HTMLCanvasElement.prototype.toBlob) {  // 浏览器兼容性检查， 如果不支持toBlob 则需要重写
+                    Object.defineProperty(HTMLCanvasElement.prototype, 'toBlob', {
+                        value: function (callback, type, quality) {
+
+                            var binStr = atob( this.toDataURL(type, quality).split(',')[1] ),
+                                len = binStr.length,
+                                arr = new Uint8Array(len);
+
+                            for (var i=0; i<len; i++ ) {
+                            arr[i] = binStr.charCodeAt(i);
+                            }
+
+                            callback( new Blob( [arr], {type: type || 'image/png'} ) );
+                        }
+                    });
+                }
+                console.log(cropper.getCroppedCanvas());
+                console.log(cropper.getCroppedCanvas().toDataURL('image/jpeg'));
+
+                $(".img").attr("src" , cropper.getCroppedCanvas().toDataURL('image/jpeg')); // 直接转换成base64
+
+                // cropper.getCroppedCanvas().toBlob((blob) => {
+                //     console.log('---------' +  blob);
+                //     // const formData = new FormData();
+
+                //     // formData.append('croppedImage', blob);
+
+                //     // // Use `jQuery.ajax` method
+                //     // $.ajax('/path/to/upload', {
+                //     //     method: "POST",
+                //     //     data: formData,
+                //     //     processData: false,
+                //     //     contentType: false,
+                //     //     success() {
+                //     //     console.log('Upload success');
+                //     //     },
+                //     //     error() {
+                //     //     console.log('Upload error');
+                //     //     },
+                //     // });
+                // });
+            },
+            build: function (e) { //加载开始  
+                //可以放你的过渡 效果  
+                console.log(111111111)
+            }, 
+            built: function (e) { //加载完成  
+            },
+            checkCrossOrigin: true,    //插件会检测图片的源，如果是跨域图片，图片元素会被添加crossOrigin class，并会为图片的url添加一个时间戳来使getCroppedCanvas变为可用
+            minContainerWidth: 300,
+            minContainerHeight:300,
+            minCanvasWidth: 300,
+            minCanvasHeight: 300,
+            minCropBoxWidth : 300,  //   裁剪框的最小宽度。   注意：此大小是相对于页面而不是图像。
+            minCropBoxHeight: 300,   // 裁剪框的最小高度    注意：此大小是相对于页面而不是图像。
+            rotatable : false ,     // 是否允许旋转
+            guides:false,   // 默认true 显示裁剪框上方的虚线。
+            center: false, // 默认true  是否显示裁剪框 中间的+ 
+            background : false,// 容器是否显示网格背景  
+            dragMode: "move",       //可以拖动图片  crop    'none': do nothing  图片就不能拖动了   'crop': create a new crop box  当鼠标 点击一处时根据这个点重新生成一个 裁剪框
+            modal : false,       // 默认值true。是否在剪裁框上显示黑色的模态窗口
+            cropBoxMovable :false,   //是否允许拖动裁剪框 
+            cropBoxResizable :false, //是否允许拖动 改变裁剪框大小   
+            toggleDragModeOnDblclick: false,    //在裁剪器上单击两次时，可以在“裁剪”和“移动”之间切换拖动模式。
+        });
+        
+    </script>
+</body>
+</html>
